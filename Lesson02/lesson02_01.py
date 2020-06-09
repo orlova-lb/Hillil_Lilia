@@ -5,4 +5,4 @@ print("\n Escape sequences\n\
 \\t Horizontal tab \n\
 \\\\ Backslash \\\n\
 \\\" Double quotation mark \" \n\
-\\'  Single quotation mark ' \n ")
+\\' Single quotation mark ' \n ")
