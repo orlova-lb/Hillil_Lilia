@@ -30,45 +30,32 @@ print()
 
 
 # ромб 1
+
 height = int(input('Please enter the height of figure:\t'))
-width = height * 2 -1
+height = height if height % 2 != 0 else height + 1
 print(' "C"')
-for i in range(height // 2):
-    for j in range(width):
-        if height // 2 - 1 - i <= j <= height // 2 - 1 + i:
-            print('* ', end='')
+for i in range(height):
+    for j in range(height):
+        if i + j >= height // 2 >= j - i and i <= (height - 1) // 2\
+            or i - j == ((height - 1) // 2) or i + j == 3 * (height - 1) // 2:
+            print("* ", end='')
         else:
-            print('  ', end='')
-    print()
-for i in range(height // 2):
-    if i == 0:
-        continue
-    for j in range(width):
-        if i == j or i == width // 2 - j -1:
-            print('* ', end='')
-        else:
-            print('  ', end='')
+            print("  ", end='')
     print()
 print()
 
-height = int(input('Please enter the height of figure:\t'))
-width = height * 2 - 1
+
+height = int(input('Please enter the height of figure:\t')) -1
+height = height if height % 2 != 0 else height + 1
 print(' "D"')
-for i in range(height // 2):
-    for j in range(width):
-        if height // 2 - 1 - i <= j <= height // 2 - 1 + i:
-            print('* ', end='')
+for i in range(height):
+    for j in range(height):
+        if i + j >= height // 2 >= j - i and i <= (height - 1) // 2 or\
+            i - j == ((height - 1) // 2) or i + j == 3 * (height - 1) // 2\
+            or j == height // 2 :
+            print("* ", end='')
         else:
-            print('  ', end='')
-    print()
-for i in range(height // 2):
-    if i == 0:
-        continue
-    for j in range(width):
-        if i == j or i == width // 2 - j -1 or j == height // 2 - 1:
-            print('* ', end='')
-        else:
-            print('  ', end='')
+            print("  ", end='')
     print()
 print()
 
