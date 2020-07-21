@@ -14,10 +14,10 @@ from random import randint
 
 def reverse_list(lst):
     for i in range(0, len(lst)//2):
-        lst[i], lst[len(lst)-i] = lst[len(lst)-i], lst[i]
+        lst[i], lst[len(lst)-i-1] = lst[len(lst)-i-1], lst[i]
 
 
 my_list = [randint(0, 100) for _ in range(30)]
 print(my_list)
-res = reverse_list(my_list)
-print(res)
+reverse_list(my_list)
+print(my_list)
