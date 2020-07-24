@@ -24,15 +24,15 @@ n = int(input('Please enter the N: '))
 matrix = [[randrange(10, 100) for i in range(m)] for k in range(n)]
 lst = []
 for i in range(m):
-    sum1 = 0
+    s = 0
     for k in matrix:
-        sum1 += k[i]
-    lst.append(sum1)
+        s += k[i]
+    lst.append(s)
 for i in range(n):
-    sum2 = 0
+    s = 0
     for k in range(m):
         print('{0: >{1}}'.format(matrix[i][k], len(str(lst[k]))), end=' ')
-        sum2 += matrix[i][k]
-    print('    ', sum2)
+        s += matrix[i][k]
+    print('    ', s)
 for i in lst:
     print(i, end=' ')
