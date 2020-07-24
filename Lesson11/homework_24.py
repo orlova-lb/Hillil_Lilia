@@ -19,18 +19,18 @@
 """
 
 from random import randrange
-m = int(input('Please enter the M: '))
-n = int(input('Please enter the N: '))
-matrix = [[randrange(10, 100) for i in range(m)] for k in range(n)]
+m = int(input('Введите количество строк: '))
+n = int(input('Введите количество столбцов: '))
+matrix = [[randrange(10, 100) for i in range(n)] for k in range(m)]
 lst = []
-for i in range(m):
+for i in range(n):
     s = 0
     for k in matrix:
         s += k[i]
     lst.append(s)
-for i in range(n):
+for i in range(m):
     s = 0
-    for k in range(m):
+    for k in range(n):
         print('{0: >{1}}'.format(matrix[i][k], len(str(lst[k]))), end=' ')
         s += matrix[i][k]
     print('    ', s)
