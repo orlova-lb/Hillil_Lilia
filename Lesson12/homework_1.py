@@ -26,7 +26,7 @@ for k in range(len(a)):
         summa += int(a[k][i])
     summa = summa/int(len(a[k][2:]))
     summa1 += summa
-    print('{0: <{1}}'.format(a[k][1] + ' ' + a[k][0], maxlen),
+    print('{: <15}'.format(a[k][1] + ' ' + a[k][0], maxlen),
           '{:.2f}'.format(summa), sep='\t', file=output)
     if summa < 5:
         dict1[a[k][1] + ' ' + a[k][0]] = summa
@@ -38,3 +38,4 @@ for k in dict1:
 print('{0: <{1}}'.format('Класс', maxlen), '{:.2f}'.format(summa1 / len(a)),
       sep='\t')
 output.close()
+
